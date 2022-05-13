@@ -32,7 +32,7 @@ searchForm.addEventListener('submit', e => {
 
 async function searchMovies(search) {
     try {
-        const movie = await (await fetch(`http://www.omdbapi.com/?apikey=871fc2a6&s=${search}`)).json();
+        const movie = await (await fetch(`https://www.omdbapi.com/?apikey=871fc2a6&s=${search}`)).json();
 
         movie.Search.map(element=>{
         const div = document.createElement('div');
