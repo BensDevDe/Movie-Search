@@ -1,223 +1,277 @@
 @import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
 
-
 body {
-    font-family: 'Calistoga', cursive;
-    padding: 10px 95px;
-     background: black;
- 
-     .blood {
-         position: absolute;
-         left: 70%;
-         width: 200px;
-     }
- 
-     //HEADING#########################################################
-     #head {
-         font-size: 8rem;
-         color: white;
-     }
-     // SEARCH INPUT#########################################################
-     .search {
-         width: 40vw;
-         display: flex;
-         color: white;
-         align-items: top;
-         justify-content: flex-start;
- 
-         #search-form {
-             width: 30vw;
-             margin-bottom: 30px;
- 
-             #search-input {
-                 height: 30px;
-                font-family: 'Calistoga', cursive;
-                 font-size: 1.8em;
-                 color: red;
- 
-                 border: none;
-                 border-bottom: 2px solid grey;
-                 outline: none;
- 
-                 background: transparent;  
- 
-               
-             }
-             #search-input::placeholder {
-                 font-size: 1rem;
-             }
-             button {
-                 background: transparent;
-                 border: none;
-             }
-         }
- 
-     
- 
-     //MOVIE RESULT######################################################################
-     }
- 
- .movie-result {
-     width: 100%;
-     height: 100%;
-   
-     display: flex;
-     justify-content: flex-start;
-     align-items: space-between;
- 
-     gap: 20px 30px;
-     flex-wrap: wrap;
- 
-     position: relative;
- 
- 
-     div {
-         height: 100%;
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
-         align-items: flex-start;
-         color: white;
-      
-         
- 
-         .movie-box {
-             display: flex;
-             flex-direction: column;
-             justify-content: space-between;
-             align-items: flex-start;
-             
-             width: 13vw;
-             height: 100%;
-             flex-basis: calc((100% / 6)-50px);
- 
-             h1 {
-                 width: 100%;
-                 height: 25px;
-                 color: red;
-                 font-size: 1.1em;
-                 margin-bottom: -5px;
-             }
-             p {
-                 font-size: 0.8em;
-             }
-             img {
-                 width: 100%;
-                 height: 30vh;
-                 object-fit: cover;
-                 
-                 border: 2px solid white;
-                
-                
-                 border-radius: 15px;
- 
-                
-             }
-         
-         }
- 
-         .btn-more {
-             margin-top: 15px;
-             border: none;
-             background: transparent;
-             color: white;
-            
-             
-            
- 
- 
-         }
- 
-         .btn-more:hover {
-             cursor: pointer;
-             font-weight: bold;
-         }
- 
-     
- 
-     }
- 
- 
-     // movie detail ################################################################################################
- }
- 
- .movie-detail {
-        
-     width: 50vw;
-     display: flex;
-     flex-direction: row;
-   
-     justify-content: flex-start;
-     align-items: center;
-     gap: 300px;
- 
-     margin-bottom: 30px;
-     
-     h1 {
-         font-size: 4rem;
-         width: 30vw;
-         color: red;
-         margin-bottom: 25px;
-     }
-     p {
+  font-family: 'Calistoga', cursive;
+  padding: 10px 95px;
+  background: black;
+
+  @media only screen and (max-width: 60em) {
+    padding: 5px 20px;
+  }
+
+  .blood {
+    position: absolute;
+    left: 70%;
+    width: 200px;
+
+    @media only screen and (max-width: 60em) {
+      left: 10%;
+      top: 40%;
+      width: 50px;
+    }
+  }
+
+  //HEADING#########################################################
+  #head {
+    font-size: 8rem;
+    color: white;
+
+    @media only screen and (max-width: 60em) {
+      font-size: 2em;
+    }
+  }
+  // SEARCH INPUT#########################################################
+  .search {
+    width: 40vw;
+    display: flex;
+    color: white;
+    align-items: top;
+    justify-content: flex-start;
+
+    #search-form {
+      width: 30vw;
+      margin-bottom: 30px;
+
+      #search-input {
+        height: 30px;
+        font-family: 'Calistoga', cursive;
+        font-size: 1.8em;
+        color: red;
+
+        border: none;
+        border-bottom: 2px solid grey;
+        outline: none;
+
+        background: transparent;
+      }
+      #search-input::placeholder {
+        font-size: 1rem;
+      }
+      button {
+        background: transparent;
+        border: none;
+      }
+    }
+
+    //MOVIE RESULT######################################################################
+  }
+
+  .movie-result {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: space-between;
+
+    gap: 20px 30px;
+    flex-wrap: wrap;
+
+    position: relative;
+
+    @media only screen and (max-width: 60em) {
+      flex-direction: column;
+
+      gap: 20px 30px;
+      flex-wrap: wrap;
+
+      position: relative;
+    }
+
+    div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      color: white;
+
+      width: 13vw;
+      height: 100%;
+      flex-basis: calc((100% / 6)-50px);
+
+      h1 {
+        width: 100%;
+        height: 25px;
+        color: red;
+        font-size: 1.1em;
+        margin-bottom: -5px;
+      }
+      p {
+        font-size: 0.8em;
+      }
+      img {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+
+        border: 2px solid white;
+
+        border-radius: 15px;
+      }
+
+      .movie-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        width: 13vw;
+        height: 100%;
+        flex-basis: calc((100% / 6)-50px);
+
+        h1 {
+          width: 100%;
+          height: 25px;
+          color: red;
+          font-size: 1.1em;
+          margin-bottom: -5px;
+        }
+        p {
+          font-size: 0.8em;
+        }
+        img {
+          width: 100%;
+          height: 30vh;
+          object-fit: cover;
+
+          border: 2px solid white;
+
+          border-radius: 15px;
+        }
+
+        @media only screen and (max-width: 60em) {
+          width: 70vw;
+          height: 100%;
+          flex-basis: 1;
+
+          h1 {
+            width: 100%;
+            height: 25px;
+            color: red;
+            font-size: 1.1em;
+            margin-bottom: -5px;
+          }
+          p {
+            font-size: 0.8em;
+          }
+          img {
+            width: 100%;
+            height: 30vh;
+            object-fit: cover;
+
+            border: 2px solid white;
+
+            border-radius: 15px;
+          }
+        }
+      }
+
+      .btn-more {
+        margin-top: 15px;
+        border: none;
+        background: transparent;
+        color: white;
+      }
+
+      .btn-more:hover {
+        cursor: pointer;
+        font-weight: bold;
+      }
+    }
+
+    // movie detail ################################################################################################
+  }
+
+  .movie-detail {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: flex-start;
+    align-items: center;
+    gap: 300px;
+
+    margin-bottom: 30px;
+
+    h1 {
+      font-size: 4rem;
+      width: 30vw;
+      color: red;
+      margin-bottom: 25px;
+    }
+    p {
       font-size: 1.2em;
       font-family: Arial, Helvetica, sans-serif;
       margin-top: -0.2em;
       color: white;
- 
+
       span {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+    }
+
+    .movie-text {
+      width: 200px;
+    }
+
+    img {
+      width: 20vw;
+
+      border-radius: 15px;
+      border: 10px solid white;
+    }
+
+    @media only screen and (max-width: 60em) {
+      width: 80vw;
+      display: flex;
+      flex-direction: column;
+
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      gap: 0px;
+
+      margin-bottom: 30px;
+
+      h1 {
+        font-size: 1.5rem;
+        width: 30vw;
+        color: red;
+        margin-bottom: 25px;
+      }
+      p {
+        font-size: 0.7em;
+        max-width: 70vw;
+
+        span {
           font-weight: bold;
           font-size: 1.2em;
+        }
       }
-      
-     }
- 
-     .movie-text {
-         width: 200px;
-     }
- 
-     img {
-         width: 20vw;
-        
-         border-radius: 15px;
-         border: 10px solid white;
-     }
- }
- 
- }
- 
- 
- 
- 
- 
- 
- 
-  // input[type="checkbox"] + label {
-             //     position: absolute;
-                 
-             //     :hover {
-             //         cursor: pointer;
-             //     }
-             //   }
-             //   input[type="checkbox"] {
-             //     position: relative;
-             //     left: 15px;
-             //     top: -4px;
-             //     z-index: 0;
-             //     -webkit-appearance: none;
-             //   }
-             //   input[type="checkbox"] + label::before {
-             //     width: 15px;
-             //     height: 15px;
-             //     background-color: white;
-             //     display: block;
-             //     content: "";
-             //     float: left;
-             //     margin-right: 5px;
-             //     z-index: 5;
-             //     position: relative;
-             //   }
-             //   input[type="checkbox"]:checked+label::before {
-             //     background-color: #c72f2f;
-             //     content: 'x';
-             //   }
+
+      .movie-text {
+        width: 200px;
+      }
+
+      img {
+        width: 100%;
+       
+
+        border-radius: 15px;
+        border: 10px solid white;
+      }
+    }
+  }
+}
